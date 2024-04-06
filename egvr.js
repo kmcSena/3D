@@ -282,7 +282,7 @@ export const cls = () => {
 };
 
 // 例: box関数内の変更点
-
+/*
 export const box = (x, y, z, size = .5, color = "green", parent) => {
   // 一括で変更するためのオフセットを定義
   const offsetX = -5000.0; // X軸に対するオフセット
@@ -303,3 +303,4 @@ export const box = (x, y, z, size = .5, color = "green", parent) => {
   s.setAttribute("depth", size);
   return s;
 };
+*/
