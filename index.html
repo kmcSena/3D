@@ -1,0 +1,16 @@
+<script type="module">
+//import * as eg from "https://js.sabae.cc/egvr.js";
+import * as eg from "./egvr.js";
+
+eg.box(0, .5, -1, 1, eg.hsl(180, 1, 0.5));
+eg.model("https://code4fukui.github.io/vr-kanazawa-it/kanta.glb", 1, 0, -1);
+eg.text("Hello", -.3, 2, -1.5);
+eg.text("eg.js", .3, 2.1, -1.8, 1.5, eg.hsl(90, 1, 0.5));
+
+const p = eg.sphere(0, 1.5, -1, .5, "red");
+setInterval(() => {
+  const b = eg.isNear(p, 1.0);
+  //console.log(b);
+  p.setAttribute("visible", !b);
+}, 1000 / 60);
+</script>

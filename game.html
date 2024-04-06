@@ -1,0 +1,25 @@
+<script type="module">
+//import * as eg from "https://js.sabae.cc/egvr.js";
+import * as eg from "./egvr.js";
+
+for (;;) {
+  const text = eg.text("START", 0, 1.8, -2);
+  await eg.waitClick(document.body);
+  eg.scene.removeChild(text);
+
+  const tstart = performance.now();
+  for (let i = 0; i < 10; i++) {
+    const x = Math.random() * 2 - 1;
+    const y = Math.random() * 1 + .5;
+    const z = -1 - i * .5;
+    const a = eg.sphere(x, y, z);
+    await eg.waitClick(a);
+    eg.scene.removeChild(a);
+  }
+  await eg.sleep(100);
+  const dt = (performance.now() - tstart) / 1000;
+  const text2 = eg.text("TIME:" + dt.toFixed(2) + "sec", 0, 1.8, -2);
+  await eg.waitClick(document.body);
+  eg.scene.removeChild(text2);
+}
+</script>

@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<script src="https://code4fukui.github.io/aframe/dist/aframe-master.min.js"></script>
+<a-scene>
+  <a-box color="red" position="0 0 -5"></a-box>
+  <a-camera id="camera" position="0 0 10"></a-camera>
+</a-scene>
+<script type="module">
+setInterval(() => {
+  console.log(camera.getAttribute("position"));
+}, 500);
+</script>
