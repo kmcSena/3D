@@ -280,3 +280,26 @@ export const cls = () => {
     scene.removeChild(remlist[i]);
   }
 };
+
+// 例: box関数内の変更点
+
+export const box = (x, y, z, size = .5, color = "green", parent) => {
+  // 一括で変更するためのオフセットを定義
+  const offsetX = 1.0; // X軸に対するオフセット
+  const offsetY = 0.0; // Y軸に対するオフセット
+  const offsetZ = 0.0; // Z軸に対するオフセット
+
+  // オフセットを適用
+  x += offsetX;
+  y += offsetY;
+  z += offsetZ;
+
+  // 以下、元の関数の処理...
+  const s = cr("a-box", parentOrScene(parent));
+  s.setAttribute("position", { x, y, z });
+  setColor(s, color);
+  s.setAttribute("width", size);
+  s.setAttribute("height", size);
+  s.setAttribute("depth", size);
+  return s;
+};
