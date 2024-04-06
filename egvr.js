@@ -67,7 +67,7 @@ export const sphere = (x, y, z, size = .5, color = "red", parent) => {
   return s;
   // 例: box関数内の変更点
 
-export const box = (x, y, z, size = .5, color = "green", parent) => {
+export const sphere = (x, y, z, size = .5, color = "green", parent) => {
   // 一括で変更するためのオフセットを定義
   const offsetX = 1.0; // X軸に対するオフセット
   const offsetY = 0.0; // Y軸に対するオフセット
