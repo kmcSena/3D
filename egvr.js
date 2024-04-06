@@ -6,9 +6,11 @@ export { sleep } from "https://js.sabae.cc/sleep.js";
 export const scene = cr("a-scene");
 scene.setAttribute("renderer", "colorManagement: true; sortObjects: true");
 
-// camera
+// カメラの作成と属性設定
 export const camera = cr("a-camera");
+camera.setAttribute("camera", "fov: 110; near: 0.1; far: 1000"); // fovを110度に設定
 scene.appendChild(camera);
+
 
 // for controller event
 export const ctrl1 = cr("a-entity");
