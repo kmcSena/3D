@@ -286,7 +286,7 @@ export const cls = () => {
 export const box = (x, y, z, size = .5, color = "green", parent) => {
   // 一括で変更するためのオフセットを定義
   const offsetX = 0.0; // X軸に対するオフセット
-  const offsetY = 100.0; // Y軸に対するオフセット
+  const offsetY = 10.0; // Y軸に対するオフセット
   const offsetZ = 0.0; // Z軸に対するオフセット
 
   // オフセットを適用
